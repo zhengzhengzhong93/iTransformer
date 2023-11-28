@@ -13,7 +13,7 @@ Six challenging multivariate forecasting tasks are evaluated as the benchmark. W
 ## Scripts
 
 In each folder named after the dataset, we provide the iTransformer experiments under four different prediction lengths as shown in the table above.
-
+在每个以数据集命名的文件夹中，我们提供了上表所示四种不同预测长度下的 iTransformer 实验。
 ```
 # iTransformer on the Traffic Dataset
 
