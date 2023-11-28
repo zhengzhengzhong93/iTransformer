@@ -21,7 +21,7 @@ bash ./scripts/multivariate_forecast/Traffic/iTransformer.sh
 ```
 
 To evaluate the model under other input/prediction length, feel free to change the ```seq_len``` and ```pred_len``` arguments:
-
+要评估其他输入/预测长度下的模型，请随意更改 seq_len 和 pred_len 参数：
 ```
 # iTransformer on the Electricity Dataset, where 180 time steps are inputed as the observations and the task is to predict the future 60 steps
 
@@ -49,9 +49,11 @@ python -u run.py \
 
 
 ## Training on Custom Dataset
-
+自定义数据集培训
 To train with your own time series dataset, you can try out the following steps:
-
-1. Read through the ```Dataset_Custom``` class under the ```data_provider/data_loader``` folder, which provides the functionality to load and process time series files.
+要使用自己的时间序列数据集进行训练，可以尝试以下步骤：
+1. Read through the ```Dataset_Custom``` class under the ```data_provider/data_loader``` folder, which provides the functionality to load and process time series files.阅读 ```data_provider/data_loader``` 文件夹下的 ```Dataset_Custom``` 类，该类提供加载和处理时间序列文件的功能。
 2. The file should be ```csv``` format with the first column contains the timestamp and the following columns contain the variates of time series.
+文件应为```csv```格式，第一列包含时间戳，以下各列包含时间序列的变量。
 3. Set ```data=custom``` and modifiy the ```enc_in```, ```dec_in```, ```c_out``` arguments acoording to your number of variates in the training script.
+设置 ```data=custom``` 并根据训练脚本中的变量数量修改 ``enc_in```、``dec_in```、``c_out`` 参数。
